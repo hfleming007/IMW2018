@@ -88,6 +88,27 @@ var map = new mapboxgl.Map({
           48.41917592250883], // starting position [lng, lat]
     zoom: 14 // starting zoom
 });
+
+map.on('load', function() {
+  // define layers and colours
+    var layers = ['1730-10000', '10000-50000', '50000-100000', '100000-150000', '150000+'];
+var colors = ['#FFEDA0', '#cfecd9', '#a0dab3', '#40b7c4', '#3195a0', '#253393'];
+// add legend
+for (i = 0; i < layers.length; i++) {
+  var layer = layers[i];
+  var color = colors[i];
+  var item = document.createElement('div');
+  var key = document.createElement('span');
+  key.className = 'legend-key';
+  key.style.backgroundColor = color;
+
+  var value = document.createElement('span');
+  value.innerHTML = layer;
+  item.appendChild(key);
+  item.appendChild(value);
+  legend.appendChild(item);
+}
+});
     
 // Add zoom and rotation controls to the map.    
 map.addControl(new mapboxgl.NavigationControl());
