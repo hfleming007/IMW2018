@@ -84,16 +84,17 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFyZW5hYiIsImEiOiJjajV2ajVyZXUwMnN3MzNwNzR3Y
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/marenab/cjl2oczit56x42rlxm5adlopg', // stylesheet location
-    center: [-89.26425933837889,
-          48.41917592250883], // starting position [lng, lat]
-    zoom: 14 // starting zoom
+    //center: [-89.26425933837889,
+          //48.41917592250883], // starting position [lng, lat]
+    //zoom: 14 // starting zoom
 });
 
 map.on('load', function() {
   // define layers and colours
     var layers = ['1730-10000', '10000-50000', '50000-100000', '100000-150000', '150000+'];
-var colors = ['#FFEDA0', '#cfecd9', '#a0dab3', '#40b7c4', '#3195a0', '#253393'];
-map.getCanvas().style.cursor = 'default';
+    var colors = ['#FFEDA0', '#cfecd9', '#a0dab3', '#40b7c4', '#3195a0', '#253393'];
+    map.getCanvas().style.cursor = 'default';
+    map.fitBounds([[-188.0859375, 37.1603165], [-30.5859375, 83.3595113]]);
 // add legend
 for (i = 0; i < layers.length; i++) {
   var layer = layers[i];
