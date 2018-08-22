@@ -93,6 +93,7 @@ map.on('load', function() {
   // define layers and colours
     var layers = ['1730-10000', '10000-50000', '50000-100000', '100000-150000', '150000+'];
 var colors = ['#FFEDA0', '#cfecd9', '#a0dab3', '#40b7c4', '#3195a0', '#253393'];
+map.getCanvas().style.cursor = 'default';
 // add legend
 for (i = 0; i < layers.length; i++) {
   var layer = layers[i];
