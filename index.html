@@ -60,9 +60,9 @@ p {
   padding: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   line-height: 18px;
-  height: 150px;
+  height: 200px;
   margin-bottom: 40px;
-  width: 100px;
+  width: 150px;
 }
 
 .legend-key {
@@ -116,7 +116,7 @@ map.on('mousemove', function(e) {
   });
 
   if (provinces.length > 0) {
-    document.getElementById('pd').innerHTML = '<h3><strong>' + provinces[0].properties.NAME + '</strong></h3><p><strong><em>' + provinces[0].properties.aboriginal_pop + '</strong>Aboriginal population</em></p>';
+    document.getElementById('pd').innerHTML = '<h3><strong>' + provinces[0].properties.NAME + '</strong></h3><p><strong><em>' + provinces[0].properties.aboriginal_pop + '</strong> Aboriginal population</em></p>';
   } else {
     document.getElementById('pd').innerHTML = '<p>Hover over a province!</p>';
   }
